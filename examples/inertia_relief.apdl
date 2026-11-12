@@ -1,0 +1,20 @@
+! Example command snippet for a free body (no supports): automatic inertia relief.
+! Use "apdl": "inertia_relief.apdl" in case.json and remove fixed_supports.
+! AIRL needs bonded contact with small sliding on EVERY CONTA174 type, and
+! Mechanical's generated remote-mass attachments omit it, so set KEYOPT(18) on all.
+! Explicit six modes: automatic counting conflicted with remote-point DOFs.
+FINISH
+/PREP7
+*GET,_fea_etmax,ETYP,0,NUM,MAX
+*DO,_fea_et,1,_fea_etmax
+  *GET,_fea_en,ETYP,_fea_et,ATTR,ENAM
+  *IF,_fea_en,EQ,174,THEN
+    KEYOPT,_fea_et,18,1
+  *ENDIF
+*ENDDO
+ALLSEL,ALL
+SHPP,WARN
+FINISH
+/SOLU
+AIRL,6
+NEQIT,1,FORCE

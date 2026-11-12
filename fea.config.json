@@ -1,0 +1,5 @@
+{
+  "workbench": {"host": "localhost", "port": null, "security": "wnua"},
+  "mechanical": {"host": "127.0.0.1", "port": null, "security": "wnua"},
+  "connect_timeout": 10
+}

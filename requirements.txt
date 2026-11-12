@@ -1,0 +1,2 @@
+ansys-workbench-core==0.14.0
+ansys-mechanical-core==0.13.5

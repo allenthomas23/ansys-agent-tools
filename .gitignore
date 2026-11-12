@@ -1,0 +1,28 @@
+.venv/
+__pycache__/
+*.py[cod]
+Thumbs.db
+.DS_Store
+desktop.ini
+.env
+.env.*
+!.env.example
+
+# This machine's session ports.
+fea.local.json
+
+# Command output and throwaway scripts; promote reusable ones to tools/ or project/.
+reports/
+scratch/
+
+# Workbench locks, scratch, backups and regenerable solver results. Keep the
+# .wbpj with its _files directory; delete .rst ignores if results must be kept.
+*.lock
+_ProjectScratch/
+.*_files.backup/
+*.wbpj.bak
+*_files/dp*/SYS*/MECH/*.rst
+*_files/dp*/SYS*/MECH/*.rth
+*_files/dp*/SYS*/MECH/*.full
+*_files/dp*/SYS*/MECH/*.esav
+*_files/dp*/SYS*/MECH/*.emat

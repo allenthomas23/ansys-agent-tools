@@ -1,0 +1,19 @@
+{
+  "marker": "Example case - setup",
+  "analysis": 0,
+  "materials": {"Plate": "Aluminum alloy - EXAMPLE"},
+  "suppress_imported_contacts": true,
+  "bonded_joints": [
+    {"name": "Rib bonded to plate", "source": "RIB_END", "target": "PLATE_INNER", "trim_mm": 2}
+  ],
+  "point_masses": [
+    {"name": "Battery", "faces": "BATTERY_MOUNT", "kg": 0.4, "cg_m": [0.0, 0.02, 0.0], "inertia_kg_m2": [1e-4, 2e-4, 1e-4]}
+  ],
+  "forces": [
+    {"name": "Load 100 N +Y", "faces": "LOAD_FACES", "N": [0, 100, 0]}
+  ],
+  "fixed_supports": ["MOUNT_FACES"],
+  "gravity": "NegativeYAxis",
+  "element_size_mm": 2,
+  "apdl": null
+}
